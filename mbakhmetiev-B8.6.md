@@ -35,7 +35,7 @@ networks:
 
 Не вижу index.php
 
-![1](./file_not_found.png)
+<img src="file_not_found.png">
 
 Вроде бы все на месте, конфиги на nginx:
 
