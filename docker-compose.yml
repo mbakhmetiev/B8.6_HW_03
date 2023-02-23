@@ -1,0 +1,28 @@
+version: "3"
+services:
+  php:
+    container_name: php
+    build:
+      context: ./devops_module10_compose
+      dockerfile: ./Dockerfile
+    ports: 
+      - "9000:9000"
+    restart: unless-stopped
+    networks:
+      - app-network
+#    healthcheck:
+#      test: ["CMD","curl http://nginx | grep works"]
+  nginx:
+    container_name: nginx
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./devops_module10_compose/nginx/:/etc/nginx/conf.d/
+      - ./devops_module10_compose/www/:/var/www/
+    restart: unless-stopped
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
