@@ -35,15 +35,15 @@ networks:
 
 Не вижу index.php
 
-![](file_not_found.png)
+![1](file_not_found.png)
 
 Вроде бы все на месте, конфиги на nginx:
 
-![](nginx_configs.JPG)
+![2](nginx_configs.JPG)
 
 и php.ini:
 
-![](php_configs.JPG)
+![3](php_configs.JPG)
 
 Контейнеры в up:
 
@@ -53,4 +53,4 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS  
 037fbfc2398a   sf_dcomp_php   "docker-php-entrypoi…"   34 minutes ago   Up 34 minutes   0.0.0.0:9000->9000/tcp, :::9000->9000/tcp   php
 61202c5a3f1a   nginx:alpine   "/docker-entrypoint.…"   34 minutes ago   Up 34 minutes   0.0.0.0:80->80/tcp, :::80->80/tcp           nginx
 ```
-![](ss_plantu.JPG)
+![4](ss_plantu.JPG)
